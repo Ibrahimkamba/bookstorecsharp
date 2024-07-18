@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace BookStoreApp
 {
-    public partial class Form1 : Form
+    public partial class BookDetailForm : Form
     {
-        Data.Connection con = new Data.Connection();
-        public Form1()
+        public BookDetailForm()
         {
             InitializeComponent();
-            Data.Connection.DataSource();
-            con.ConnOpen();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace BookStoreApp
 {
-    public partial class Form1 : Form
+    public partial class SearchRequestFrom : Form
     {
-        Data.Connection con = new Data.Connection();
-        public Form1()
+        public SearchRequestFrom()
         {
             InitializeComponent();
-            Data.Connection.DataSource();
-            con.ConnOpen();
+        }
+
+        private void SearchRequestFrom_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

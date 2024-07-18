@@ -10,14 +10,11 @@ using System.Windows.Forms;
 
 namespace BookStoreApp
 {
-    public partial class Form1 : Form
+    public partial class ReservationForm : Form
     {
-        Data.Connection con = new Data.Connection();
-        public Form1()
+        public ReservationForm()
         {
             InitializeComponent();
-            Data.Connection.DataSource();
-            con.ConnOpen();
         }
     }
 }

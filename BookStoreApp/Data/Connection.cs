@@ -9,29 +9,56 @@ namespace BookStoreApp.Data
 {
     class Connection
     {
-        public static MySqlConnection conn = new MySqlConnection();
+        private static MySqlConnection conn;
 
-        static string server = "sql8.freesqldatabase.com;";
-        static string database = "sql8720437;";
-        static string Uid = "sql8720437;";
-        static string password = "SWBRJQR7PI;";
+        private static readonly string server = "bkbxqvr3u99gdowtsu8c-mysql.services.clever-cloud.com";
+        private static readonly string database = "bkbxqvr3u99gdowtsu8c";
+        private static readonly string Uid = "u5dmf8qxsxlp6sca";
+        private static readonly string password = "iMsCpRUikhByXlmWSQnb";
 
-        public static MySqlConnection dataSource()
+        public static MySqlConnection DataSource()
         {
-            conn = new MySqlConnection($"server={server} database={database} Uid={Uid} password={password}");
+            string connectionString = $"server={server};database={database};Uid={Uid};password={password};";
+            conn = new MySqlConnection(connectionString);
             return conn;
         }
 
-        public void connOpen()
+        public void ConnOpen()
         {
-            dataSource();
-            conn.Open();
+            try
+            {
+                conn = DataSource();
+                conn.Open();
+                Console.WriteLine("Connection opened successfully.");
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("MySQL error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("General error: " + ex.Message);
+            }
         }
 
-        public void connClose()
+        public void ConnClose()
         {
-            dataSource();
-            conn.Close();
+            try
+            {
+                if (conn != null && conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                    Console.WriteLine("Connection closed successfully.");
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("MySQL error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("General error: " + ex.Message);
+            }
         }
     }
 }
