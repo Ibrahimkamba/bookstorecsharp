@@ -105,9 +105,6 @@
     <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.9.0.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="MySqlConnector, Version=0.61.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySqlConnector.0.61.0\lib\net471\MySqlConnector.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -174,11 +171,17 @@
     <Compile Include="AddReservation.Designer.cs">
       <DependentUpon>AddReservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="AvailabilityForm.cs">
+    <Compile Include="BookRecordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AvailabilityForm.Designer.cs">
-      <DependentUpon>AvailabilityForm.cs</DependentUpon>
+    <Compile Include="BookRecordForm.Designer.cs">
+      <DependentUpon>BookRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckAvailabilityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckAvailabilityForm.Designer.cs">
+      <DependentUpon>CheckAvailabilityForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BookDetailForm.cs">
       <SubType>Form</SubType>
@@ -202,6 +205,9 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlaceholderTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationForm.cs">
@@ -216,6 +222,12 @@
     <Compile Include="ReservationForm.Designer.cs">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReservationSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationSummaryForm.Designer.cs">
+      <DependentUpon>ReservationSummaryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchRequestFrom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,14 +240,18 @@
     <Compile Include="SearchResultForm.Designer.cs">
       <DependentUpon>SearchResultForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SessionManager.cs" />
     <EmbeddedResource Include="AddReservation.resx">
       <DependentUpon>AddReservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AvailabilityForm.resx">
-      <DependentUpon>AvailabilityForm.cs</DependentUpon>
+    <EmbeddedResource Include="CheckAvailabilityForm.resx">
+      <DependentUpon>CheckAvailabilityForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookDetailForm.resx">
       <DependentUpon>BookDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>

@@ -1,17 +1,12 @@
-﻿
-namespace BookStoreApp
+﻿namespace BookStoreApp
 {
     partial class SearchResultForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Label labelSummary;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.LinkLabel linkLabelClose;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,65 +18,60 @@ namespace BookStoreApp
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelSummary = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lnkSearchRequest = new System.Windows.Forms.LinkLabel();
+            this.linkLabelClose = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelSummary
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(140, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.labelSummary.AutoSize = true;
+            this.labelSummary.Location = new System.Drawing.Point(13, 13);
+            this.labelSummary.Name = "labelSummary";
+            this.labelSummary.Size = new System.Drawing.Size(100, 17);
+            this.labelSummary.TabIndex = 0;
+            this.labelSummary.Text = "[Search Summary]";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(143, 139);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 40);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(759, 300);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // lnkSearchRequest
+            // linkLabelClose
             // 
-            this.lnkSearchRequest.AutoSize = true;
-            this.lnkSearchRequest.Location = new System.Drawing.Point(143, 42);
-            this.lnkSearchRequest.Name = "lnkSearchRequest";
-            this.lnkSearchRequest.Size = new System.Drawing.Size(81, 13);
-            this.lnkSearchRequest.TabIndex = 2;
-            this.lnkSearchRequest.TabStop = true;
-            this.lnkSearchRequest.Text = "Back to Search";
+            this.linkLabelClose.AutoSize = true;
+            this.linkLabelClose.Location = new System.Drawing.Point(13, 350);
+            this.linkLabelClose.Name = "linkLabelClose";
+            this.linkLabelClose.Size = new System.Drawing.Size(46, 17);
+            this.linkLabelClose.TabIndex = 2;
+            this.linkLabelClose.TabStop = true;
+            this.linkLabelClose.Text = "Close";
+            this.linkLabelClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelSearchRequest_LinkClicked);
             // 
             // SearchResultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lnkSearchRequest);
+            this.ClientSize = new System.Drawing.Size(800, 380);
+            this.Controls.Add(this.linkLabelClose);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelSummary);
             this.Name = "SearchResultForm";
-            this.Text = "SearchResultForm";
+            this.Text = "Search Result";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.LinkLabel lnkSearchRequest;
     }
 }

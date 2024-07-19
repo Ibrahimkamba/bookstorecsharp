@@ -1,17 +1,9 @@
-﻿
-namespace BookStoreApp
+﻿namespace BookStoreApp
 {
-    partial class SearchRequestFrom
+    partial class SearchRequestForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,61 +15,74 @@ namespace BookStoreApp
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.cmbSearchCriterion = new System.Windows.Forms.ComboBox();
-            this.txtSearchValue = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new BookStoreApp.PlaceholderTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // cmbSearchCriterion
+            // label1
             // 
-            this.cmbSearchCriterion.FormattingEnabled = true;
-            this.cmbSearchCriterion.Location = new System.Drawing.Point(59, 64);
-            this.cmbSearchCriterion.Name = "cmbSearchCriterion";
-            this.cmbSearchCriterion.Size = new System.Drawing.Size(121, 21);
-            this.cmbSearchCriterion.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Search by:";
             // 
-            // txtSearchValue
+            // comboBox1
             // 
-            this.txtSearchValue.Location = new System.Drawing.Point(197, 64);
-            this.txtSearchValue.Name = "txtSearchValue";
-            this.txtSearchValue.Size = new System.Drawing.Size(448, 20);
-            this.txtSearchValue.TabIndex = 1;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Name",
+            "Author",
+            "Subject"});
+            this.comboBox1.Location = new System.Drawing.Point(113, 10);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 24);
+            this.comboBox1.TabIndex = 1;
             // 
-            // btnSearch
+            // textBox1
             // 
-            this.btnSearch.Location = new System.Drawing.Point(652, 60);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(117, 23);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(16, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(297, 22);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.PlaceholderText = "Enter search value";
             // 
-            // SearchRequestFrom
+            // button1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.button1.Location = new System.Drawing.Point(16, 90);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(297, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // SearchRequestForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtSearchValue);
-            this.Controls.Add(this.cmbSearchCriterion);
-            this.Name = "SearchRequestFrom";
-            this.Text = "SearchRequestFrom";
-            this.Load += new System.EventHandler(this.SearchRequestFrom_Load);
+            this.ClientSize = new System.Drawing.Size(334, 135);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
+            this.Name = "SearchRequestForm";
+            this.Text = "Search Request";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbSearchCriterion;
-        private System.Windows.Forms.TextBox txtSearchValue;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private PlaceholderTextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
